@@ -17,6 +17,7 @@ COPY apache2.conf /etc/apache2/apache2.conf
 RUN /usr/sbin/a2enmod rewrite
 RUN /usr/sbin/a2enmod proxy
 RUN /usr/sbin/a2enmod proxy_http
+RUN /usr/sbin/a2enmod ssl
 
 RUN rm -rf /var/www/html
 RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/log/apache2 /var/www/html
