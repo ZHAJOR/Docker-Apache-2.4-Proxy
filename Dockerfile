@@ -7,8 +7,7 @@ RUN apt-get -y install apache2
 RUN apt-get clean
 
 ENV proxy /api
-ENV proxy-url 127.0.0.1
-ENV proxy-port 12345
+ENV proxy-host http://192.168.99.100:12345/api
 
 RUN ln -sf /dev/stdout /var/log/apache2/access.log 
 RUN ln -sf /dev/stderr /var/log/apache2/error.log
